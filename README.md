@@ -1,4 +1,4 @@
-# quiz_app
+# TheGoodGameTheory
 
 upload product video for showing example of app
 
