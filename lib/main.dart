@@ -1,14 +1,19 @@
 import 'dart:developer';
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
-
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).then((_) {
+    runApp(MyApp());
+  });
+}
 
 class MyApp extends StatefulWidget {
   @override
